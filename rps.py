@@ -11,13 +11,13 @@ def play():
 
     if user == computer:
         print("Waiting for opponent...")
-        sleep(randint(1,6))
+        sleep(randint(1,4))
         print('\nIt\'s a tie\nYour Choice: ' + user + ". Their Choice: " + computer)
         play()
 
     if is_win(user, computer):
         print("Waiting for opponent...")
-        sleep(randint(1,6))
+        sleep(randint(1,4))
         print('\nYou win!\nYour Choice: ' + user + ". Their Choice: " + computer)
         playsound(r'C:\Users\jetfl\Coding\Rock-Paper-Scissors\Sound\win.wav')
         input("\nPress enter to play again")
@@ -25,7 +25,7 @@ def play():
 
     if is_win(computer, user):
         print("Waiting for opponent...")
-        sleep(randint(1,6))
+        sleep(randint(1,4))
         print('\nYou lost!!\nYour Choice: ' + user + ". Their Choice: " + computer)
         playsound(r'C:\Users\jetfl\Coding\Rock-Paper-Scissors\Sound\lose.wav')
         input("\nPress enter to play again")
