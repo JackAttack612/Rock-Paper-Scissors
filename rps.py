@@ -1,5 +1,6 @@
 import random
 import time
+from playsound import playsound
 from random import randint
 from time import sleep
 
@@ -10,25 +11,23 @@ def play():
 
     if user == computer:
         print("Waiting for opponent...")
-        sleep(randint(1,9))
+        sleep(randint(1,6))
         print('\nIt\'s a tie\nYour Choice: ' + user + ". Their Choice: " + computer)
-        time.sleep(2)
-        input("\nPress enter to play again")
         play()
 
     if is_win(user, computer):
         print("Waiting for opponent...")
-        sleep(randint(1,9))
+        sleep(randint(1,6))
         print('\nYou win!\nYour Choice: ' + user + ". Their Choice: " + computer)
-        time.sleep(2)
+        playsound(r'C:\Users\jetfl\Coding\Rock-Paper-Scissors\Sound\win.wav')
         input("\nPress enter to play again")
         play()
 
     if is_win(computer, user):
         print("Waiting for opponent...")
-        sleep(randint(1,9))
+        sleep(randint(1,6))
         print('\nYou lost!!\nYour Choice: ' + user + ". Their Choice: " + computer)
-        time.sleep(2)
+        playsound(r'C:\Users\jetfl\Coding\Rock-Paper-Scissors\Sound\lose.wav')
         input("\nPress enter to play again")
         play()
     
